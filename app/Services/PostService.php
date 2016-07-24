@@ -21,13 +21,14 @@ class PostService
     }
 
     /**
-     * @param PostIDPO $po
+     * @param int $id
+     * @param string $default
      * @return string
      */
-    public function showTitle(PostIDPO $po) : string
+    public function showTitle(int $id, string $default) : string
     {
         return $this->postRepository
-            ->getTitle($po->ip, $po->default)
+            ->getTtle($id, $default)
             ->title;
     }
 }
