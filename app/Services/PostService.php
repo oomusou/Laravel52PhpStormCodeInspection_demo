@@ -27,24 +27,8 @@ class PostService
      */
     public function showTitle(int $id, string $default) : string
     {
-        switch ($id) {
-            case 1 :
-
-
-
-                $defaultTitle = 'No title 1';
-
-            case 2 :
-                $defaultTitle = 'No title 2';
-                break;
-
-            default:
-                $defaultTitle = $default;
-                break;
-        }
-
         return $this->postRepository
-            ->getTitle($id, $defaultTitle)
+            ->getTitle($id, $default)
             ->title;
     }
 }
