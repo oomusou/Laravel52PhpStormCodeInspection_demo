@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace App\Services;
 
-use App\Repositories\PostRepository;
+use App\Repositries\PostRepository;
 
 class PostService
 {
