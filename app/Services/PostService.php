@@ -31,4 +31,9 @@ class PostService
             ->getTitle($id, $default)
             ->title;
     }
+
+    public function showDescription()
+    {
+        return $description;
+    }
 }
