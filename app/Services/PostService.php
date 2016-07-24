@@ -15,20 +15,19 @@ class PostService
      * PostService constructor.
      * @param PostRepository $postRepository
      */
-    public function __construct(PostRepositry $postRepository)
+    public function __construct(PostRepository $postRepository)
     {
         $this->postRepository = $postRepository;
     }
 
     /**
-     * @param int $id
-     * @param string $default
+     * @param PostIDPO $po
      * @return string
      */
-    public function showTitle(int $id, string $default) : string
+    public function showTitle(PostIDPO $po) : string
     {
         return $this->postRepository
-            ->getTitle($id, $default)
+            ->getTitle($po->ip, $po->default)
             ->title;
     }
 }
