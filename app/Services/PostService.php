@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace App\Services;
 
-use App\Repositries\PostRepository;
+use App\Repositories\PostRepository;
 
 class PostService
 {
@@ -15,7 +15,7 @@ class PostService
      * PostService constructor.
      * @param PostRepository $postRepository
      */
-    public function __construct(PostRepository $postRepository)
+    public function __construct(PostRepositry $postRepository)
     {
         $this->postRepository = $postRepository;
     }
